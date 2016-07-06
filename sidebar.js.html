@@ -1,0 +1,34 @@
+<!-- JS for the main sidebar -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+// Runs a server-side function to add the user-selected text to the selected project and display confirmation or error.
+//   @param element The element that called this function
+function addTask(element) {
+  element.disabled = true;
+  $('#error').remove();
+  google.script.run
+    .withSuccessHandler(
+      function(taskLi, element) {
+        $('#taskList').prepend(taskLi);
+        element.disabled = false;
+      })
+    .withFailureHandler(
+      function(msg, element) {
+        showError(msg.message, element);
+        element.disabled = false;
+      })
+    .withUserObject(element) // This lets us keep access to the DOM element that called this in our callback functions
+    .addTaskTodoist(element.id); // The actual server function call
+}
+
+// Inserts a div that contains an error message after a given element.
+// Copied from Google's Translate Sample Script
+// https://github.com/google/google-apps-script-samples/tree/master/translate
+//   @param msg The error message to display.
+//   @param element The element after which to display the error.
+function showError(msg, element) {
+  var div = $('<div id="error" class="error">' + msg + '</div>');
+  $(element).after(div);
+}
+</script>

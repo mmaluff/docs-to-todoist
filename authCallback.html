@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- HTML template for the text that displays after a user tries to log into Todoist -->
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <style>
+      html {
+        width: 100%;
+        height: 70%;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: table
+      }
+      
+      .splash {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="splash">
+      <!-- The text of the success/error message -->
+      <h1><?!= splashText ?></h1>
+    </div>
+  </body>
+</html>

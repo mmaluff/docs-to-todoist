@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Template for the authentication sidebar. Displays when the user needs to log into Todoist. -->
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <?!= include("sidebar.css.html"); ?>
+  </head>
+  <body>
+    <div class="auth">
+      <div class="message">
+        <p>Sign into Todoist to access the Todoist sidebar</p>
+      </div>
+      <div class="buttons">
+          <a class="button action" href="<?!= response.authUrl ?>">Sign in</a>
+        <button onclick="google.script.host.close()">Close</button>
+      </div>
+    </div>
+  </body>
+</html>

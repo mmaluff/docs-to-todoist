@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Template for the main sidebar. Most of the content comes from server-side scripts. -->
+    <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <?!= include("sidebar.css.html"); ?>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h3 class="title-projects">Add selection to Todoist project</h3>
+      <div class="projects">
+        <?!= projects ?>
+      </div>
+      <h3 class="title-tasks">Added tasks</h3>
+      <div class="tasks">
+        <ul class="tasks" id="taskList">
+        </ul>
+      </div>
+    </div>
+    <?!= include("sidebar.js.html"); ?>
+  </body>
+</html>
