@@ -2,6 +2,8 @@
 This Docs add-on adds a sidebar to Google Docs that lets you add selected 
 text from your document to a Todoist project of your choosing. 
 
+![The sidebar in action](/sidebar.png?raw=true "Screenshot")
+
 Created by Mauricio Maluff Masi on 2016-06-19.
 
 Disclaimer: I'm not affiliated with Google or Doist. Google, Doist, Todoist,
